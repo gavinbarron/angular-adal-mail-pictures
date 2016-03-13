@@ -1,0 +1,25 @@
+<md-content ng-controller="homeController as vm">
+    <div layout="column">
+        <md-input-container>
+            <label>Files from</label>
+            <input type="email" ng-model="vm.email" placeholder="who@sentfiles.net" />
+        </md-input-container>
+        <md-button class="md-primary md-raised" ng-disabled="vm.loading" ng-click="vm.loadData()">
+            Get files
+        </md-button>
+    </div>
+    <div layout="row" layout-align="space-around">
+        <md-progress-circular ng-show="vm.loading" md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <div layout="row">
+        <md-button ng-repeat="file in vm.dataObject" class="md-raised" ng-click="vm.view(file.emailId, file.id)" ng-bind="file.name">
+            <md-tooltip autohide ng-show="vm.isImage(file.contentType)">Show image - ({{file.size}} bytes)</md-tooltip>
+        </md-button>
+    </div>
+    <div ng-if="vm.previewImage" layout="row" layout-padding layout-wrap layout-fill>
+        <md-whiteframe class="md-whiteframe-1dp">
+            <img src="{{vm.previewImage}}" style="max-height: 700px;" />
+        </md-whiteframe>
+    </div>
+    <pre>{{vm.dataObject | json}}</pre>
+</md-content>
