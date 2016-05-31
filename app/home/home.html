@@ -12,7 +12,7 @@
         <md-progress-circular ng-show="vm.loading" md-mode="indeterminate"></md-progress-circular>
     </div>
     <div layout="row">
-        <md-button ng-repeat="file in vm.dataObject" class="md-raised" ng-click="vm.view(file.emailId, file.id)" ng-bind="file.name">
+        <md-button ng-repeat="file in vm.dataObject" class="md-raised" ng-click="vm.view(file.emailId, file.id, file.name)" ng-bind="file.name">
             <md-tooltip autohide ng-show="vm.isImage(file.contentType)">Show image - ({{file.size}} bytes)</md-tooltip>
         </md-button>
     </div>
@@ -20,6 +20,9 @@
         <md-whiteframe class="md-whiteframe-1dp">
             <img src="{{vm.previewImage}}" style="max-height: 700px;" />
         </md-whiteframe>
+        <md-button class="md-primary md-raised"  ng-disabled="vm.loading" ng-click="vm.upload()">
+            Save to SharePoint
+        </md-button>
     </div>
     <pre>{{vm.dataObject | json}}</pre>
 </md-content>

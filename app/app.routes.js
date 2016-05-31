@@ -1,20 +1,20 @@
-(function(){
-  'use strict';
+( function() {
+  "use strict";
 
-  var graphApp = angular.module('graphApp');
+  var graphApp = angular.module( "graphApp" );
 
-  // load routes
-  graphApp.config(['$routeProvider', routeConfigurator]);
+  // Load routes
+  graphApp.config( [ "$routeProvider", routeConfigurator ] );
 
-  function routeConfigurator($routeProvider){
+  function routeConfigurator( $routeProvider ) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'home/home.html',
-        controller: 'homeController',
-        controllerAs: 'vm',
+      .when( "/", {
+        templateUrl: "home/home.html",
+        controller: "homeController",
+        controllerAs: "vm",
         requireADLogin: true
-      });
+      } );
 
-    $routeProvider.otherwise({redirectTo: '/'});
+    $routeProvider.otherwise( { redirectTo: "/" } );
   }
-})();
+} )();
