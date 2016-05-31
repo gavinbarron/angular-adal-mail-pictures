@@ -16,6 +16,7 @@
         vm.previewImage = null;
         vm.imageName = "";
         vm.rawBytes = null;
+
         vm.loadData = function() {
             vm.loading = true;
             dataService.getData( vm.email )
