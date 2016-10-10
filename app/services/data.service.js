@@ -10,7 +10,7 @@
     function dataService( $q, $http ) {
         var self = this;// jshint ignore:line
         self.attachments = [];
-        self.webUri = "https://<tennant>.sharepoint.com/";
+        self.webUri = "";
         self.libraryTitle = "Images";
 
         // The public signature of the service

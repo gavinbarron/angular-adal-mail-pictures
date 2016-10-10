@@ -12,7 +12,7 @@
       extraQueryParameter: "nux=1",
       endpoints: {
         "https://graph.microsoft.com": "https://graph.microsoft.com",
-        "https://<tenant>.sharepoint.com": "https://<tenant>.sharepoint.com"
+        "https://tenant.sharepoint.com": "https://tenant.sharepoint.com"
       },
       cacheLocation: "localStorage" // In IE sessionStorage doesn't work for localhost.
     };

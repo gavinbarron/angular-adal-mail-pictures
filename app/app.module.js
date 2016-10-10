@@ -6,7 +6,8 @@
     "ngRoute",
     "ngSanitize",
     "AdalAngular",
-    "ngMaterial"
+    "officeuifabric.core",
+    "officeuifabric.components"
   ] );
 
   // Configure

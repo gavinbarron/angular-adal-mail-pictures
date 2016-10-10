@@ -11,7 +11,7 @@
         var vm = this;  // jshint ignore:line
         vm.title = "home controller";
         vm.dataObject = {};
-        vm.email = "gavin.barron@teamintergen.com";
+        vm.email = "";
         vm.loading = false;
         vm.previewImage = null;
         vm.imageName = "";

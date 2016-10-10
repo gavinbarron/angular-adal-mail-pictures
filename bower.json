@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "dependencies": {
     "microsoft.office.js": "*",
-    "angular": "~1.4.4",
+    "angular": "~1.5.0",
     "angular-route": "~1.4.4",
     "angular-sanitize": "~1.4.4",
     "adal-angular": "~1.0.5",
     "office-ui-fabric": "*",
-    "angular-material": "^1.0.6",
-    "lodash": "^4.6.1"
+    "lodash": "^4.6.1",
+    "ng-office-ui-fabric": "^0.12.6"
   }
 }
